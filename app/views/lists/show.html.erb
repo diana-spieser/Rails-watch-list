@@ -1,3 +1,4 @@
+<div class="container">
 <h1> <%= @list.name %> </h1>
 
 <ul>
@@ -7,7 +8,5 @@
 </ul>
 
 <%= link_to "add bookmark", new_list_bookmark_path(@list) %>
-
-
-<%= button_to "Delete this bookmark", @list, method: :delete %>
+<%= link_to "back to main", lists_path, class:"text-decoration-none" %>
 </div>
