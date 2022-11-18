@@ -1,9 +1,12 @@
-<h1>New List</h1>
+div class="container">
+<h1>My new list</h1>
 
-<%= render "form", list: @list %>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit class: 'btn btn-primary' %>
 
-<br>
+<% end %><br>
 
-<div>
-  <%= link_to "Back to lists", lists_path %>
+<%= link_to "Cancel the creation", lists_path, class:"text-decoration-none" %>
 </div>
